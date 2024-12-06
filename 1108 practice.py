@@ -1,3 +1,4 @@
+# 1
 import matplotlib.pyplot as plt
 
 # 데이터 생성
@@ -25,3 +26,27 @@ plt.legend()
 plt.grid(True)
 # plt.show()
 plt.savefig("./results/linechart.png")
+
+#2
+import matplotlib.pyplot as plt
+
+#데이터 생성
+categories = ['Apple', 'Banana', 'Orange', 'Strawberry', 'Grape']
+values = [25, 30, 15, 20, 35] # 각 카테고리에 대한 값 # 대응 안되면 그래프 안 만들어짐
+
+# plot 초기화
+plt.clf()
+
+# 막대 그래프 생성
+plt.bar(categories, values, color='skyblue') # 순서대로 X축, Y축, 옵션 지정
+
+# 그래프 제목 추가
+plt.title('Fruit Sales')
+
+# 축 레이블 추가
+plt.xlabel('Fruit')
+plt.ylabel('Sales')
+
+# 그래프 표시
+# plt.show()
+plt.savefig("./results/bar_chart.png")
