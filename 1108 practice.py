@@ -50,3 +50,27 @@ plt.ylabel('Sales')
 # 그래프 표시
 # plt.show()
 plt.savefig("./results/bar_chart.png")
+
+#3
+import matplotlib.pyplot as plt #matplotlib.pyplot 를 plt라고 부를게
+import numpy as np #numpy 를 np 라고 부를게
+
+# 데이터 생성 (랜덤 데이터 예시)
+data = np.random.randn(1000) # 1000개의 랜덤 데이터 생성
+
+# plot 초기화
+plt.clf()
+
+# 히스토그램 생성
+plt.hist(data, bins = 20, color  = 'skyblue', edgecolor = 'black')
+
+# 그래프에 제목 추가
+plt.title('Histogram Chart')
+
+# 축 레이블 추가
+plt.xlabel('Values')
+plt.ylabel('Frequency')
+
+# 그래프 표시
+# plt.show()
+plt.savefig('./results/histogram.png')
