@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 filename = "./data/1_pima.csv"
@@ -18,5 +19,6 @@ ax.set_xticks(ticks)
 ax.set_yticks(ticks)
 ax.set_xticklabels(column_names)
 ax.set_yticklabels(column_names)
-
+for (i, j), value in np.ndenumerate(correlations):
+	ax.text(j, i, f"{value:.2f}", ha="center", va="center", color="black")
 plt.savefig("./results/correlation_plot.png")
